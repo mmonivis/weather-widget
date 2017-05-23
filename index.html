@@ -10,14 +10,41 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <script src="config.js" type="text/javascript"></script>
+
     <script src="scripts.js" type="text/javascript"></script>
 
 </head>
 <body>
 
-<canvas id="weather-canvas" height="500px" width="500px">
-    <!-- Put the weather widget arc in here! -->
-</canvas>
+<div class="container">
+    <div class="col-sm-12 content">
+        <div class="col-sm-12 header text-center">
+            <div class="title">
+                <h1>Today's Forecast</h1>
+            </div>
+            <form id="weather-form">
+                <div class="zip-code-input">
+                    <label>Please enter a zip code to search</label>
+                </div>
+                <div>
+                    <input type="text" id="zip-code" placeholder="30342" />
+                    <button class="btn btn-default" type="submit">Get the weather</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-12 temp-feed">
+            <div class="col-sm-6 temp-widget">
+                <canvas id="weather-canvas" height="500px" width="500px">
+                    <!-- Put the weather widget arc in here! -->
+                </canvas>
+            </div>
+            <div class="col-sm-6" id="temp-info">
+                <!-- Temp info to be placed here -->
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
